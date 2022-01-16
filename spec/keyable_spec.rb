@@ -1,16 +1,19 @@
 require './spec_helper.rb'
+require './lib/keyable.rb'
 
 RSpec.describe Keyable do
-  before(:each) do
-    @keyable = Keyable.new("02715")
-  end
+  # before(:each) do
+  #
+  # end
 
   it 'exists' do
-    expect(@keyable).to be_a(Keyable)
+    keyable = Keyable.new("02715")
+    expect(keyable).to be_instance_of(Keyable)
   end
 
   it 'has attributes' do
-    expect(@keyable.key).to eq("02715")
+    keyable = Keyable.new("02715")
+    expect(keyable.key).to eq("02715")
   end
 
   it 'generates a random 5-digit key to use' do
