@@ -1,10 +1,6 @@
 require './spec_helper.rb'
-require './lib/keyable.rb'
 
 RSpec.describe Keyable do
-  # before(:each) do
-  #
-  # end
 
   it 'exists' do
     keyable = Keyable.new("02715")
