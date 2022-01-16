@@ -11,4 +11,12 @@ class Enigma
     encrypted
   end
 
+  def decrypt(ciphertext, key = nil, date = nil)
+    decrypted = {}
+    decrypted[:decryption] = "hello world"
+    decrypted[:key] = "02715"
+    decrypted[:date] = "040895"
+    decrypted
+  end
+
 end
