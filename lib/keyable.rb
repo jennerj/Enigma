@@ -1,4 +1,5 @@
 class Keyable
-  def initialize
+  def initialize(arguement)
+    @arguement = arguement
   end
 end
