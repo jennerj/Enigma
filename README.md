@@ -6,16 +6,16 @@ Welcome to Enigma! This program uses a command line interface to run a message t
 
 #### To Encrypt
 - Enter the following into your command line
-'ruby ./lib/encrypt.rb message.txt encrypted.txt'
+`ruby ./lib/encrypt.rb message.txt encrypted.txt`
 - It should return the following
-'Created 'encrypted.txt' with the key <5_digit_key> and date <DDMMYY>'
+`Created 'encrypted.txt' with the key <5_digit_key> and date <DDMMYY>`
 - View the created encrypted.txt file to see the encrypted message
 
 #### To Decrypt
 - Enter the following into your command line
-'ruby ./lib/decrypt.rb encrypted.txt decrypt.txt <5_digit_key> <DDMMYY>'
+`ruby ./lib/decrypt.rb encrypted.txt decrypt.txt <5_digit_key> <DDMMYY>`
 - It should return the following
-'Created 'decrypted.txt' with the key <5_digit_key> and date <DDMMYY>'
+`Created 'decrypted.txt' with the key <5_digit_key> and date <DDMMYY>`
 - View the created decrypted.txt file to see the decrypted message.
 
 ## Self-Assessment
