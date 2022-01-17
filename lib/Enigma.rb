@@ -4,19 +4,29 @@ class Enigma
   end
 
   def encrypt(message, key = nil, date = nil)
+    @keyable = Keyable.new(key)
+    @offset = Offset.new(date)
+    @shift = Shift.new(@keyable.keys, @offset.offsets)
+    array = @shift.shifts.values.map {|value| value.to_i}
     encrypted = {}
-    encrypted[:encryption] = "keder ohulw"
-    encrypted[:key] = "02715"
-    encrypted[:date] = "040895"
+    encrypted[:encryption] = y(message, array)
+    encrypted[:key] = @keyable.key
+    encrypted[:date] = @offset.date
     encrypted
   end
 
   def decrypt(ciphertext, key = nil, date = nil)
+    @keyable = Keyable.new(key)
+    @offset = Offset.new(date)
+    @shift = Shift.new(@keyable.keys, @offset.offsets)
+    array = @shift.shifts.values.map {|value| value.to_i}
     decrypted = {}
-    decrypted[:decryption] = "hello world"
-    decrypted[:key] = "02715"
-    decrypted[:date] = "040895"
+    decrypted[:decryption] = x(ciphertext, array)
+    decrypted[:key] = key
+    decrypted[:date] = @offset.date
     decrypted
   end
+
+
 
 end
