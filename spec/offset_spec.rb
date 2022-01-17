@@ -4,6 +4,7 @@ RSpec.describe Offset do
 
   it 'exists' do
     offset = Offset.new("040895")
+    expect(offset).to be_instance_of(Offset)
   end
 
   it 'generates the date of today if no date is given' do

@@ -18,7 +18,7 @@ RSpec.describe Shift do
 
   it 'can add keys and offsets' do
     expected = {"A" => "3", "B" => "27", "C" => "73", "D" => "20"}
-    expect(@shift.sum_of_keys_and_offsets(@keyable.keys, @offset.offsets)).to eq(expected)
+    expect(@shift.sum_of_keys_and_offsets).to eq(expected)
   end
 
 
