@@ -1,6 +1,7 @@
-class Enigma
+class Enigma < Shift
 
-  def initialize
+  def initialize(keys, offsets)
+    super(keys, offsets)
   end
 
   def encrypt(message, key = nil, date = nil)
