@@ -23,5 +23,4 @@ RSpec.describe Keyable do
     keyable = Keyable.new("02715")
     expect(keyable.gen_four_keys).to eq({"A" => "02", "B" => "27", "C" => "71", "D" => "15"})
   end
-
 end
