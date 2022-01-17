@@ -1,8 +1,9 @@
 class Keyable
-  attr_accessor :key
+  attr_accessor :key, :keys
 
   def initialize(key = nil)
     @key = generate(key)
+    @keys = gen_four_keys
   end
 
   def generate(key)
@@ -13,7 +14,7 @@ class Keyable
     end
   end
 
-  def gen_four_keys(key)
+  def gen_four_keys
     @keys = {}
     @keys["A"] = (key = @key[0..1])
     @keys["B"] = (key = @key[1..2])
