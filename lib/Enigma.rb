@@ -45,18 +45,7 @@ class Enigma
           #if letter = a then alphabet_array.index(letter) is 0 + key from above(shift_letter_amount)
           new_index = alphabet_array.index(letter) + shift_letter_amount
           # if number passed into new_index is higher than usable index number (ie..27) then reduce till usable
-          if new_index >= 108
-            new_index = new_index - 108
-          end
-          if new_index >= 81
-            new_index = new_index - 81
-          end
-          if new_index >= 54
-            new_index = new_index - 54
-          end
-          if new_index >= 27
-            new_index = new_index - 27
-          end
+          new_index = new_index % 27
           #generates new index value and then pulls encrypted letter from alphabet array
           new_letter = alphabet_array[new_index]
           #placeholder encrypted messaged gets letter added to it
@@ -78,6 +67,10 @@ class Enigma
         if alphabet_array.include?(letter)
           shift_letter_amount = shift_loop.next
           new_index = alphabet_array.index(letter) - shift_letter_amount
+          # require "pry"; binding.pry
+          # if new_index < 0
+          #   new_index = 27 % (new_index * -1)
+          # end
           if new_index < -81
             new_index = new_index + 108
           end
