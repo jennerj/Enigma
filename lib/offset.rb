@@ -1,7 +1,16 @@
 class Offset
-  attr_reader :date
-  def initialize(date)
-    @date = date
+  attr_reader :date, :offsets
+  def initialize(date = nil)
+    @date = generate(date)
+    @offsets = offset_group
+  end
+
+  def generate(date)
+    if date == nil
+      @date = Date.today.strftime("%m%d%y")
+    else
+      date
+    end
   end
 
   def offset(date)
