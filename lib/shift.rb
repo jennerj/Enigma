@@ -1,5 +1,7 @@
 class Shift
-  def initialize
-    @argument = argument
+  def initialize(keys, offsets)
+    @keys = keys
+    @offsets = offsets
   end
+  
 end
