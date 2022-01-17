@@ -1,7 +1,9 @@
 class Shift
+  attr_reader :keys, :offsets
   def initialize(keys, offsets)
     @keys = keys
     @offsets = offsets
+    # @shifts = sum_of_keys_and_offsets
   end
 
   def sum_of_keys_and_offsets(keys, offsets)

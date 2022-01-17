@@ -2,11 +2,21 @@ require './spec_helper.rb'
 
 RSpec.describe Enigma do
   before(:each) do
+    # @keyable = Keyable.new("02715")
+    # @offset = Offset.new("040895")
+    #
+    # @keyable.gen_four_keys
+    # @offset.offset_group
+    #
+    # @shift = Shift.new(@keyable.keys, @offset.offsets)
     @enigma = Enigma.new
+
   end
 
   it 'exists' do
     expect(@enigma).to be_a(Enigma)
+    # expected = {"A" => "3", "B" => "27", "C" => "73", "D" => "20"}
+    # expect(@enigma.sum_of_keys_and_offsets(@keyable.keys, @offset_maker.offsets)).to eq(expected)
   end
 
   it 'can encrypt message with key and date' do
